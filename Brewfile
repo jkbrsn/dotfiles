@@ -1,0 +1,11 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+brew "bat" # Clone of cat(1) with syntax highlighting and Git integration
+brew "git"
+brew "zsh"
+brew "wget"
+brew "node"
+brew "bash-completion"
+cask "google-chrome"
+cask "visual-studio-code"
