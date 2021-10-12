@@ -11,3 +11,6 @@ ln -ns ~/versioned/dotfiles/.zshrc ~/.zshrc
 
 # Install packages and applications from Brewfile
 brew bundle --file ~/versioned/dotfiles/Brewfile
+
+# Install oh-my-zsh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
