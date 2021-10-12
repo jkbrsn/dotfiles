@@ -1,4 +1,8 @@
-# This is Git's per-user configuration file.
 [user]
 	name = Jakob Andersson
 	email = erikjakobandersson@gmail.com
+[credential]
+	helper = cache --timeout=7200
+[pager]
+	branch = false
+	diff = true
