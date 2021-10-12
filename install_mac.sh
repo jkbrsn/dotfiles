@@ -14,3 +14,6 @@ brew bundle --file ~/versioned/dotfiles/Brewfile
 
 # Install oh-my-zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install fonts for oh-my-zsh
+./install_powerline_fonts.sh
