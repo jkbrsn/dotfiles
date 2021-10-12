@@ -1,5 +1,4 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/core"
 brew "bat" # Clone of cat(1) with syntax highlighting and Git integration
 brew "git"

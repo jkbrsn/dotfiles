@@ -5,3 +5,16 @@ export NVM_DIR="$HOME/.nvm"
 
 source $HOME/.aliases
 source $HOME/.functions
+
+# oh-my-zsh specifics
+
+# Path to the oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# Theme
+ZSH_THEME="agnoster"
+
+# Plugins
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
