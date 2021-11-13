@@ -21,5 +21,8 @@ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo apt install code -y
 
-sudo apt install curl nodejs npm docker-compose -y
+curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+sudo apt install curl npm docker-compose -y
 sudo apt autoremove -y
