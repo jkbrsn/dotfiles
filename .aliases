@@ -20,3 +20,5 @@ alias gpl='git pull'
 alias gpo='git push --force origin "$(git_current_branch)"'
 alias gshn='git show --name-only'
 alias grbud='git rebase upstream/develop'
+# to override ghost script
+alias gs='git status'
