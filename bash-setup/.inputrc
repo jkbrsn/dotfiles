@@ -1,0 +1,5 @@
+# https://dev.to/betterways/zsh-style-updown-arrows-in-bashreadline-linuxunix-series-3mid
+# up arrow
+"\e[A":history-search-backward
+# down arrow
+"\e[B":history-search-forward
