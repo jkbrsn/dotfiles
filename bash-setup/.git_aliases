@@ -208,8 +208,8 @@ alias gsi='git submodule init'
 alias gsps='git show --pretty=short --show-signature'
 alias gsr='git svn rebase'
 alias gss='git status --short'
-alias gst='git status'
 
+alias gst='git stash' # equal to git stash push
 alias gsta='git stash push'
 alias gstaa='git stash apply'
 alias gstc='git stash clear'
