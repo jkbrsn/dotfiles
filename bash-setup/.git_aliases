@@ -17,17 +17,17 @@ function work_in_progress() {
   command git -c log.showSignature=false log -n 1 2>/dev/null | grep -q -- "--wip--" && echo "WIP!!"
 }
 
-# Check if main exists and use instead of master
+# Check if master exists and use instead of main
 function git_main_branch() {
   command git rev-parse --git-dir &>/dev/null || return
   local ref
-  for ref in refs/{heads,remotes/{origin,upstream}}/{main,trunk,mainline,default}; do
+  for ref in refs/{heads,remotes/{origin,upstream}}/{master,trunk,mainline,default}; do
     if command git show-ref -q --verify $ref; then
       echo ${ref:t}
       return
     fi
   done
-  echo master
+  echo main
 }
 
 # Check for develop and similarly named branches

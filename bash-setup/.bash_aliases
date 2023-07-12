@@ -1,7 +1,7 @@
 # general
 alias mkcd='f () { mkdir "$@" && cd "$@"; }; f'
 alias reboot='echo "Rebooting in 10 seconds - abort with CTRL+C" && sleep 10 && reboot'
-alias watcha='watch -c '
+alias watcha='watch -c ' # "watch alias"
 alias ht='history | tail'
 
 # cd
@@ -14,6 +14,7 @@ alias '.....'='cd ../../../..'
 alias la='ls -A'
 alias lsla='ls -la'
 alias l='ls -lah'
+alias ll='ls -alF'
 
 # git
 # imported from oh-my-zsh plugin
@@ -35,8 +36,8 @@ alias gpl='git pull'
 alias gpo='git push origin "$(git_current_branch)"'
 alias gpfo='git push origin "$(git_current_branch)" --force'
 alias gshn='git show --name-only'
-alias grbom='git rebase origin/master' # "git rebase origin master" (previously grbud='git rebase upstream/develop', from Imint times)
-alias gum='gcm && gfo && grbom' # "git update master"
+alias grbom='git rebase "$(git_main_branch)"' # "git rebase origin master" (or main) (previously grbud='git rebase upstream/develop', from Imint times)
+alias gum='gco main && gfo && grbom' # "git update main"
 # to override ghost script
 alias gs='git status'
 
@@ -48,8 +49,7 @@ alias j='juju'
 alias jc='juju controllers'
 alias jdbg='juju debug-log'
 alias jd='juju deploy'
-alias jm='juju models'
-alias jma='juju models --all'
+alias jm='juju models --all'
 alias js='juju status --color --relations'
 alias wjs='watch -c juju status --color --relations'
 alias jsw='juju switch'
