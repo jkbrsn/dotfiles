@@ -47,6 +47,7 @@ alias lxl='lxc list -c ns4tDl'
 # juju
 alias j='juju'
 alias ja='juju actions'
+alias jam='juju add-model'
 alias jc='juju controllers'
 alias jcf='juju config'
 alias jdbg='juju debug-log'
