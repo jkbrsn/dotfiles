@@ -36,7 +36,7 @@ alias gpl='git pull'
 alias gpo='git push origin "$(git_current_branch)"'
 alias gpfo='git push origin "$(git_current_branch)" --force'
 alias gshn='git show --name-only'
-alias grbom='git rebase "$(git_main_branch)"' # "git rebase origin master" (or main) (previously grbud='git rebase upstream/develop', from Imint times)
+alias grbom='git rebase origin/$(git_main_branch)' # "git rebase origin master" (or main) (previously grbud='git rebase upstream/develop', from Imint times)
 alias gum='gco main && gfo && grbom' # "git update main"
 # to override ghost script
 alias gs='git status'
@@ -46,10 +46,13 @@ alias lxl='lxc list -c ns4tDl'
 
 # juju
 alias j='juju'
+alias ja='juju actions'
 alias jc='juju controllers'
+alias jcf='juju config'
 alias jdbg='juju debug-log'
 alias jd='juju deploy'
 alias jm='juju models --all'
+alias jmg='juju models --all | grep -i'
 alias js='juju status --color --relations'
 alias wjs='watch -c juju status --color --relations'
 alias jsw='juju switch'
@@ -64,6 +67,9 @@ alias jref='juju refresh'
 alias jrel='juju relate'
 alias jres='juju resolve'
 alias jrl='juju remote list'
+alias jmclog-debug='juju model-config logging-config="<root>=WARNING;unit=DEBUG"'
+alias jmclog-info='juju model-config logging-config="<root>=WARNING;unit=INFO"'
+alias jcf-pol-ser='juju config polkadot --format json | jq ".settings.\"service-args\".value"'
 
 # docker
 alias dp='docker ps -a'
