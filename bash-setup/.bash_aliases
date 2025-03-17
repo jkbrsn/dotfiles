@@ -1,7 +1,7 @@
 # general
 alias mkcd='f () { mkdir "$@" && cd "$@"; }; f'
 alias reboot='echo "Rebooting in 10 seconds - abort with CTRL+C" && sleep 10 && reboot'
-alias watcha='watch -c ' # "watch alias"
+alias watcha='watch -c -n 1 ' # "watch alias"
 alias ht='history | tail'
 alias python='python3'
 
@@ -31,14 +31,22 @@ alias gdnh='git diff --name-only HEAD'
 alias gdnh1='git diff --name-only HEAD HEAD~1'
 alias gdnh2='git diff --name-only HEAD HEAD~2'
 alias gdnh3='git diff --name-only HEAD HEAD~3'
-alias gl='git log --pretty=format:"* %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
+alias gdss='git --no-pager diff --shortstat'
+alias glp='git log --pretty=format:"* %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
+alias gl='git --no-pager log --pretty=format:"* %Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative'
+alias gl5='gl -5'
+alias gl10='gl -10'
+alias gl20='gl -20'
+alias gl40='gl -40'
 alias gpdel='git push --delete'
 alias gpl='git pull'
 alias gpo='git push origin "$(git_current_branch)"'
 alias gpfo='git push origin "$(git_current_branch)" --force'
 alias gshn='git show --name-only'
 alias grbom='git rebase origin/$(git_main_branch)' # "git rebase origin master" (or main) (previously grbud='git rebase upstream/develop', from Imint times)
+alias grbod='git rebase origin/$(git_develop_branch)' # "git rebase origin develop"
 alias gum='gco main && gfo && grbom' # "git update main"
+alias gud='gco develop && gfo && grbod' # "git update develop"
 # to override ghost script
 alias gs='git status'
 
@@ -73,6 +81,7 @@ alias jswlab='juju switch dwellir-lab'
 alias jswll='juju switch local'
 alias jswn='juju switch neverland'
 alias jswp='juju switch site-pionen'
+alias jsws='juju switch site-singapore'
 alias jswt='juju switch site-tunis'
 alias jr='juju run'
 alias jra='juju run-action --wait'
@@ -83,6 +92,9 @@ alias jrl='juju remote list'
 
 function jj() {
     juju ssh $1 -- journalctl -f -u $2
+}
+function jgm() {
+    juju grant jandersson@external admin $(juju show-model --format json | jq -r '.[].name' | head -n 1)
 }
 
 # docker
