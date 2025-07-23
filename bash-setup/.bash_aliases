@@ -4,6 +4,7 @@ alias reboot='echo "Rebooting in 10 seconds - abort with CTRL+C" && sleep 10 && 
 alias watcha='watch -c -n 1 ' # "watch alias"
 alias ht='history | tail'
 alias python='python3'
+alias n='nvim'
 
 # cd
 alias '..'='cd ..'
