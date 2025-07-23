@@ -12,8 +12,9 @@ alias '....'='cd ../../..'
 alias '.....'='cd ../../../..'
 
 # ls
-alias la='ls -A'
 alias l='ls -lah'
+alias la='ls -A'
+alias lsa='ls -A'
 alias ll='ls -alF'
 alias lg='ls -lah | grep -i'
 
